@@ -1,0 +1,35 @@
+---
+layout: bas.html
+title: "Före och efter – bilrekond i Västerås | Glans & Omtanke"
+beskrivning: "Se resultat från våra rekondjobb i Västerås. Före och efter på riktiga bilar."
+---
+
+<section class="galleri-topp">
+  <div class="wrap">
+    <h1>Före &amp; efter</h1>
+    <p class="ingress">Riktiga bilar, riktiga resultat. Här är ett urval av våra jobb.</p>
+  </div>
+</section>
+
+<section class="galleri">
+  <div class="wrap">
+    <div class="galleri-rutnat">
+      {% for jobb in collections.jobb reversed %}
+        <article class="jobb-kort">
+          <div class="jobb-bilder">
+            <figure>
+              <img src="{{ jobb.data.fore }}" alt="Före: {{ jobb.data.titel }}">
+              <figcaption>Före</figcaption>
+            </figure>
+            <figure>
+              <img src="{{ jobb.data.efter }}" alt="Efter: {{ jobb.data.titel }}">
+              <figcaption>Efter</figcaption>
+            </figure>
+          </div>
+          <h2>{{ jobb.data.titel }}</h2>
+          <p class="jobb-tjanst">{{ jobb.data.tjanst }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

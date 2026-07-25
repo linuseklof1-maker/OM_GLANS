@@ -1,0 +1,318 @@
+:root {
+  --sand: #E8DFD3;
+  --sand-ljus: #F5F0E8;
+  --svart: #141414;
+  --svart-mjuk: #2A2A2A;
+  --gra: #6B6B6B;
+  --vit: #FFFFFF;
+
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--svart);
+  background: var(--vit);
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header */
+.header {
+  background: var(--svart);
+  padding: 1rem 0;
+}
+
+.header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--sand);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--sand);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  color: var(--vit);
+}
+
+.nav-boka {
+  background: var(--sand);
+  color: var(--svart) !important;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Hamburgare — dold på desktop, syns på mobil */
+.hamburgare {
+  display: none;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+.hamburgare span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--sand);
+  border-radius: 2px;
+}
+
+.hamburgare span:nth-child(1) { top: 2px; }
+.hamburgare span:nth-child(2) { top: 11px; }
+.hamburgare span:nth-child(3) { top: 20px; }
+
+/* Footer */
+.footer {
+  background: var(--svart);
+  color: var(--sand);
+  padding: 3rem 0 2rem;
+  margin-top: 4rem;
+}
+
+.footer a {
+  color: var(--sand);
+}
+
+/* Hero */
+.hero {
+  background: var(--svart);
+  color: var(--vit);
+  padding: 5rem 0 6rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+  max-width: 16ch;
+  margin-bottom: 1.25rem;
+}
+
+.hero .ingress {
+  color: var(--sand);
+  font-size: 1.15rem;
+  max-width: 48ch;
+  margin-bottom: 2.5rem;
+}
+
+.knappar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.knapp {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.knapp-primar {
+  background: var(--sand);
+  color: var(--svart);
+}
+
+.knapp-sekundar {
+  border: 1px solid var(--sand);
+  color: var(--sand);
+}
+
+/* Tjänstesidor */
+.tjanst-hero {
+  background: var(--svart);
+  color: var(--vit);
+  padding: 3rem 0 4rem;
+}
+
+.smulor {
+  font-size: 0.85rem;
+  color: var(--gra);
+  margin-bottom: 1rem;
+}
+
+.smulor a {
+  color: var(--sand);
+  text-decoration: none;
+}
+
+.tjanst-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.tjanst-hero .ingress {
+  color: var(--sand);
+  font-size: 1.1rem;
+  max-width: 46ch;
+  margin-bottom: 1.5rem;
+}
+
+.tjanst-meta {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.tjanst-innehall {
+  padding: 3.5rem 0;
+}
+
+.tjanst-innehall h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.4rem;
+}
+
+.tjanst-innehall ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.tjanst-innehall li {
+  margin-bottom: 0.4rem;
+}
+
+.tjanst-innehall p {
+  max-width: 60ch;
+  margin-bottom: 1rem;
+}
+
+/* Galleri */
+.galleri-topp {
+  background: var(--svart);
+  color: var(--vit);
+  padding: 3rem 0;
+}
+
+.galleri-topp .ingress {
+  color: var(--sand);
+  margin-top: 0.75rem;
+}
+
+.galleri {
+  padding: 3.5rem 0;
+}
+
+.galleri-rutnat {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.jobb-bilder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.jobb-bilder figure {
+  margin: 0;
+  position: relative;
+}
+
+.jobb-bilder img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.jobb-bilder figcaption {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background: var(--svart);
+  color: var(--sand);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.jobb-kort h2 {
+  font-size: 1.1rem;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.jobb-tjanst {
+  color: var(--gra);
+  font-size: 0.9rem;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .hamburgare {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--svart);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 1rem 1.25rem 1.5rem;
+  }
+
+  .nav-oppen {
+    display: flex;
+  }
+
+  .nav a {
+    width: 100%;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--svart-mjuk);
+  }
+
+  .nav-boka {
+    margin-top: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .header .wrap {
+    position: relative;
+  }
+}

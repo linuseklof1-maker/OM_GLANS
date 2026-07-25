@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/bilder"
+public_folder: "/bilder"
+
+collections:
+  - name: "jobb"
+    label: "Före & efter-jobb"
+    label_singular: "Jobb"
+    folder: "src/jobb"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{titel}}"
+    fields:
+      - { label: "Titel", name: "titel", widget: "string", hint: "T.ex. Svart Audi A4 – helrekond" }
+      - label: "Tjänst"
+        name: "tjanst"
+        widget: "select"
+        options: ["Invändig rekond", "Helrekond", "Keramiskt lackskydd"]
+      - { label: "Datum", name: "datum", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Före-bild", name: "fore", widget: "image" }
+      - { label: "Efter-bild", name: "efter", widget: "image" }

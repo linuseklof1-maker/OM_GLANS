@@ -1,0 +1,22 @@
+---
+layout: bas.html
+---
+
+<section class="tjanst-hero">
+  <div class="wrap">
+    <p class="smulor"><a href="/">Hem</a> / {{ rubrik }}</p>
+    <h1>{{ rubrik }}</h1>
+    <p class="ingress">{{ ingress }}</p>
+    <div class="tjanst-meta">
+      <span>⏱ {{ tid }}</span>
+      <span>💰 {{ pris }}</span>
+    </div>
+    <a href="/boka/" class="knapp knapp-primar">Boka {{ rubrik | downcase }}</a>
+  </div>
+</section>
+
+<section class="tjanst-innehall">
+  <div class="wrap">
+    {{ content }}
+  </div>
+</section>

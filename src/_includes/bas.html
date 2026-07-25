@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ beskrivning }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="wrap">
+      <a href="/" class="logo">GLANS &amp; OMTANKE</a>
+      <nav class="nav">
+        <a href="/invandig-rekond-vasteras/">Invändig</a>
+        <a href="/helrekond-vasteras/">Helrekond</a>
+        <a href="/keramiskt-lackskydd-vasteras/">Lackskydd</a>
+        <a href="/priser/">Priser</a>
+        <a href="/fore-och-efter/">Före &amp; efter</a>
+        <a href="/boka/" class="nav-boka">Boka</a>
+      </nav>
+      <button class="hamburgare" aria-label="Meny" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>Glans &amp; Omtanke AB — Västerås</p>
+    </div>
+  </footer>
+
+  <script src="/js/meny.js"></script>
+</body>
+</html>
