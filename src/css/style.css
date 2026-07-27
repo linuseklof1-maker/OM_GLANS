@@ -22,6 +22,16 @@ body {
   line-height: 1.6;
 }
 
+a {
+  color: var(--svart);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--gra);
+}
+
 .wrap {
   max-width: 1100px;
   margin: 0 auto;
@@ -315,4 +325,116 @@ body {
   .header .wrap {
     position: relative;
   }
+}
+
+/* Tjänstesektion på startsidan */
+.tjanst-sektion {
+  padding: 4rem 0;
+}
+
+.tjanst-sektion h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.tjanst-kort {
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 560px;
+}
+
+.tjanst-kort-topp {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tjanst-kort h3 {
+  font-size: 1.4rem;
+}
+
+.tjanst-kort .pris {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--svart);
+  white-space: nowrap;
+}
+
+.tjanst-kort .tid {
+  color: var(--gra);
+  margin-bottom: 1.25rem;
+}
+
+.tjanst-kort ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.tjanst-kort li {
+  margin-bottom: 0.4rem;
+}
+
+.knapp,
+.nav a,
+.logo,
+.nav-boka {
+  text-decoration: none;
+}
+
+/* Prissida */
+.pris-tabell {
+  max-width: 560px;
+}
+
+.pris-rad {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.pris-huvud {
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--svart);
+}
+
+.pris-info {
+  color: var(--gra);
+  margin: 1rem 0 2.5rem;
+  max-width: 560px;
+}
+
+.pris-tabell h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pris-cta {
+  margin-top: 2.5rem;
+}
+
+/* Bokningskalender */
+.kalender-wrap {
+  margin-bottom: 3rem;
+}
+
+.kalender-wrap iframe {
+  width: 100%;
+  min-height: 600px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+}
+
+.kalender-platshallare {
+  background: var(--sand-ljus);
+  border: 1px dashed var(--gra);
+  border-radius: 8px;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--gra);
 }
